@@ -1,10 +1,9 @@
 ﻿(function () {
     'use strict';
     var serviceId = 'uow';
-    angular.module('app').factory(serviceId, ['common', 'lowdash', 'authDataservice', '$q', 'applicationData', uow]);
-    function uow(common, _, User, $q, applicationData) {
-        var user = User.getUserData();
-        var userSessionId = user.userSessionId;
+    angular.module('app').factory(serviceId, ['common', 'lowdash',  '$q', 'applicationData', uow]);
+    function uow(common, _,  $q, applicationData) {
+  
         var manager;
         var entityQuery;
         var getLogFn = common.logger.getLogFn;
@@ -45,10 +44,7 @@
         function httpGet(forceRemote, entity, resource, orderby, select, expand, pageIndex, pageSize, filterKey, filterOperator, filtervalue) {
             var resultDataCached = null;
             var fromCache = false;
-            if (!user.isAuthenticated) {
-                logError('Please Login');
-                return [];
-            }
+       
 
       
             //* if you are filtering a collection you already pulled from the server, then do it on the viewmodel , no need to get data again here.
@@ -61,7 +57,7 @@
                 predicate = null;
             }
             if (applicationData.getDoWorkOffline()) {
-                return loadBackupData();
+                
             }
             var query = entityQuery.from(entity).orderBy(orderby).using(manager).skip(pageIndex * pageSize).take(pageSize).where(predicate).using(breeze.FetchStrategy.FromLocalCache).toType(entity).expand(expand);
 
@@ -81,9 +77,7 @@
                         fromCache: fromCache
                     });
                 } else {
-                    if (entity && !error) {
-                        clearCached(entity);
-                    }
+                    
                     
                     fromCache = false;
                     return entityQuery
@@ -104,7 +98,7 @@
                 }
             };
             function querySucceededAll(data) {
-                backupLocally();
+               
                 //if (entity === 'Customer') {
                 //    debugger;
                 //}
@@ -152,10 +146,7 @@
 
 
         function getByCompositeIds(resource, id1, id2) {
-            if (!user.isAuthenticated) {
-                logError('Please Login');
-                return [];
-            }
+          
             return entityQuery.from(resource)
             .using(manager)
             .where('entity1Id', 'eq', id1) //ex. .where('ProductId', 'eq', id1)
@@ -172,35 +163,8 @@
             logError(msg);
             throw error;
         }
-        function backupLocally() {
-            // exports only changes
-            var changes = manager.getChanges();
-            // var changesExport = manager.exportEntities(changes);
-            // return amplify.store(userSessionId, changesExport);
-            // exports everything
-            var alldata = manager.exportEntities();
-            return amplify.store(userSessionId, alldata);
-        }
-        function loadBackupData() {
-            var data = amplify.store(userSessionId);
-            if (data && data.length > 0) {
-                manager.importEntities(data);
-                var entitiesInCache = manager.getEntities();
-                var restoreCount = entitiesInCache.length;
-                return true;
-            }
-            else {
-                toastr.warning('on local storage', "There were no Entities", true);
-                return false;
-            }
-        }
-
-        function clearCached(currentEntity) {
-            var cached = manager.getEntities(currentEntity); // all items for the Entity stored in cache
-            cached.forEach(function (entity) {
-                 manager.detachEntity(entity);
-            });
-        }
+    
+    
 
     }
 })();

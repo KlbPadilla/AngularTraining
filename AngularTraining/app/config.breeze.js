@@ -3,8 +3,8 @@
     'use strict';
     // app.js injects, triggering config
     angular.module('app')
-    .factory('config.breeze', ['$q', '$http', 'use$q', 'authDataservice', 'applicationData', configBreeze]);
-    function configBreeze($q, $http, use$q, User, applicationData) {
+    .factory('config.breeze', ['$q', '$http', 'use$q',  'applicationData', configBreeze]);
+    function configBreeze($q, $http, use$q,  applicationData) {
 
         // this will tell the application to not to go to the remote server but use
         // data stored on the localstorage, session storage or cache

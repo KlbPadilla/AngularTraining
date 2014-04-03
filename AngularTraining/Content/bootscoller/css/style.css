@@ -331,7 +331,7 @@ padding-bottom:4px;
   position: relative;
   text-align: center; }
   .feature-box.feature-box-hot:before {
-    background: url("../../images/feature-box/ribbon.png") 0 0 no-repeat;
+    /*background: url("../../images/feature-box/ribbon.png") 0 0 no-repeat;*/
     background-size: 82px 82px;
     content: "";
     height: 82px;

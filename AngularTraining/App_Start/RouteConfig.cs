@@ -8,7 +8,7 @@ namespace AngularTraining
         {
           
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            // http://localhost:1499/index.html#/
+         
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

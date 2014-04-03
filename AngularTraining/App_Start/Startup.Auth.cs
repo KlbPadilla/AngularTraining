@@ -72,15 +72,7 @@ namespace AngularTraining
                 LogoutPath = new PathString("/Logout"),
             });
             app.SetDefaultSignInAsAuthenticationType("External");
-            //app.UseCookieAuthentication(new CookieAuthenticationOptions
-            //{
-            //    AuthenticationType = "External",
-            //    AuthenticationMode = AuthenticationMode.Passive,
-            //    CookieName = CookieAuthenticationDefaults.CookiePrefix + "External",
-            //    ExpireTimeSpan = TimeSpan.FromMinutes(5),
-            //});
-            // Enable CORS for all origings, all headers, and all methods,
-            //CorsOptions cors = new EnableCorsAttribute("http://localhost:1499", "*", "*");
+        
             CorsOptions cors = new CorsOptions();
             app.UseCors(cors);
             // Mounts the middleware on the provided app with the options configured

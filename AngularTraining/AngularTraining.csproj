@@ -262,11 +262,6 @@
     <Content Include="app\3rdparty\lowdash3Rd.js" />
     <Content Include="app\3rdparty\underscore3Rd.js" />
     <Content Include="app\app.js" />
-    <Content Include="app\authentication\header.js" />
-    <Content Include="app\authentication\login-form.html" />
-    <Content Include="app\authentication\login.js" />
-    <Content Include="app\authentication\logout.js" />
-    <Content Include="app\authentication\authDataservice.js" />
     <Content Include="app\common\common.js" />
     <Content Include="app\common\logger.js" />
     <Content Include="app\common\spinner.js" />
@@ -277,14 +272,10 @@
     <Content Include="app\dashboard\dashboard.js" />
     <Content Include="app\dashboard\dashboard.html" />
     <Content Include="app\filters\nameCityStateFilter.js" />
-    <Content Include="app\angulartraining\customer\customersRestangularMongoDb.js" />
-    <Content Include="app\angulartraining\customer\customersRestangularMongoDb.html" />
     <Content Include="app\angulartraining\customer\customersView.js" />
     <Content Include="app\angulartraining\customer\customersView.html" />
     <Content Include="app\angulartraining\customer\customer.html" />
     <Content Include="app\angulartraining\customer\customer.js" />
-    <Content Include="app\angulartraining\customer\customersRestangularBreeze.html" />
-    <Content Include="app\angulartraining\customer\customersRestangularBreeze.js" />
     <Content Include="app\angulartraining\customer\customers.html" />
     <Content Include="app\angulartraining\customer\customers.js" />
     <Content Include="app\angulartraining\customer\controller - Copy.js" />
@@ -473,24 +464,8 @@
     <Content Include="app\services\airportService.js" />
     <Content Include="app\services\applicationData.js" />
     <Content Include="app\services\breeze.dataservice.mongo.js" />
-    <Content Include="app\services\repositories\repository.address.js" />
-    <Content Include="app\services\repositories\repository.addressType.js" />
-    <Content Include="app\services\repositories\repository.appUser.js" />
     <Content Include="app\services\repositories\repository.prime.js" />
     <Content Include="app\services\repositories\repository.customer.js" />
-    <Content Include="app\services\repositories\repository.email.js" />
-    <Content Include="app\services\repositories\repository.emailType.js" />
-    <Content Include="app\services\repositories\repository.employee.js" />
-    <Content Include="app\services\repositories\repository.invoice.js" />
-    <Content Include="app\services\repositories\repository.invoiceDetail.js" />
-    <Content Include="app\services\repositories\repository.invoiceType.js" />
-    <Content Include="app\services\repositories\repository.message.js" />
-    <Content Include="app\services\repositories\repository.phone.js" />
-    <Content Include="app\services\repositories\repository.phoneCall.js" />
-    <Content Include="app\services\repositories\repository.phoneCallType.js" />
-    <Content Include="app\services\repositories\repository.phoneType.js" />
-    <Content Include="app\services\repositories\repository.product.js" />
-    <Content Include="app\services\repositories\repository.productCategory.js" />
     <Content Include="app\services\dataservice.js" />
     <Content Include="app\services\model.js" />
     <Content Include="app\services\directives.js" />
@@ -904,6 +879,7 @@
     <Content Include="Content\bootscoller\font\proximanova-sbold-webfont.ttf" />
     <Content Include="Content\bootscoller\font\proximanova-webfont.eot" />
     <Content Include="Content\bootscoller\font\proximanova-webfont.ttf" />
+    <None Include="Properties\PublishProfiles\OscarLocalAngularTraining.pubxml" />
     <None Include="Scripts\amplify-vsdoc.js" />
     <Content Include="jasmineTestRefs.js" />
     <Content Include="Scripts\amplify.js" />
@@ -1020,8 +996,6 @@
     <Compile Include="Authentication\Models\AccountViewModels.cs" />
     <Compile Include="Authentication\Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Authentication\Results\ChallengeResult.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\AngularTrainingController.cs" />
     <Compile Include="Authentication\Attributes\WebApiValidateAntiForgeryToken.cs" />
     <Compile Include="Filters\AntiForgeryTokenAttribute.cs" />
@@ -1033,54 +1007,11 @@
     </Compile>
     <Compile Include="Migrations\ConfigurationAuth.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Addresses.cs" />
-    <Compile Include="Models\AddressTypes.cs" />
-    <Compile Include="Models\AppUsers.cs" />
     <Compile Include="Models\Customers.cs" />
-    <Compile Include="Models\Emails.cs" />
-    <Compile Include="Models\EmailTypes.cs" />
-    <Compile Include="Models\Employees.cs" />
-    <Compile Include="Models\InvoiceDetails.cs" />
-    <Compile Include="Models\Invoices.cs" />
-    <Compile Include="Models\InvoiceTypes.cs" />
     <Compile Include="Models\AngularTrainingDbContext.cs" />
-    <Compile Include="Models\Mapping\AddressesMap.cs" />
-    <Compile Include="Models\Mapping\AddressTypesMap.cs" />
-    <Compile Include="Models\Mapping\AppUsersMap.cs" />
     <Compile Include="Models\Mapping\CustomersMap.cs" />
-    <Compile Include="Models\Mapping\EmailsMap.cs" />
-    <Compile Include="Models\Mapping\EmailTypesMap.cs" />
-    <Compile Include="Models\Mapping\EmployeesMap.cs" />
-    <Compile Include="Models\Mapping\InvoiceDetailsMap.cs" />
-    <Compile Include="Models\Mapping\InvoicesMap.cs" />
-    <Compile Include="Models\Mapping\InvoiceTypesMap.cs" />
-    <Compile Include="Models\Mapping\MessagesMap.cs" />
-    <Compile Include="Models\Mapping\PhoneCallsMap.cs" />
-    <Compile Include="Models\Mapping\PhoneCallTypesMap.cs" />
-    <Compile Include="Models\Mapping\PhonesMap.cs" />
-    <Compile Include="Models\Mapping\PhoneTypesMap.cs" />
-    <Compile Include="Models\Mapping\ProductCategoriesMap.cs" />
-    <Compile Include="Models\Mapping\ProductsMap.cs" />
-    <Compile Include="Models\Messages.cs" />
-    <Compile Include="Models\PhoneCalls.cs" />
-    <Compile Include="Models\PhoneCallTypes.cs" />
-    <Compile Include="Models\Phones.cs" />
-    <Compile Include="Models\PhoneTypes.cs" />
-    <Compile Include="Models\ProductCategories.cs" />
-    <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="UoW\ApiControllerBase.cs" />
-    <Compile Include="UoW\CustomersRepository.cs" />
-    <Compile Include="UoW\EFRepository.cs" />
-    <Compile Include="UoW\ICustomersRepository.cs" />
-    <Compile Include="UoW\IInvoiceDetailsRepository.cs" />
-    <Compile Include="UoW\IInvoicesRepository.cs" />
-    <Compile Include="UoW\IAngularTrainingUoWork.cs" />
-    <Compile Include="UoW\InvoiceDetailsRepository.cs" />
-    <Compile Include="UoW\InvoicesRepository.cs" />
-    <Compile Include="UoW\AngularTrainingUoWork.cs" />
-    <Compile Include="UoW\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -1110,7 +1041,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1499</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1499/</IISUrl>
+          <IISUrl>http://localhost:12499/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,12 +1,12 @@
 (function () {
     'use strict';
     var serviceId = 'dataservice';
-    angular.module('app').factory(serviceId, ['common', 'config', 'entityManagerFactory', 'uow', 'authDataservice', '$injector', 'zStorageWip', dataservice]);
-    function dataservice(common, config, emFactory, uow, User, $injector, zStorageWip) {
+    angular.module('app').factory(serviceId, ['common', 'config', 'entityManagerFactory', 'uow',  '$injector', 'zStorageWip', dataservice]);
+    function dataservice(common, config, emFactory, uow,  $injector, zStorageWip) {
         // get the Authenticated User information
-        var user = User.getUserData();
-        var antiForgeryToken = 'Bearer ' + user.bearerToken;
-        var userSessionId = user.userSessionId;
+       
+      
+       
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn();
         var logError = getLogFn(serviceId, 'error');
@@ -77,25 +77,18 @@
         init();
 
         function loadPrimeData() {
-            if (user.isAuthenticated) {
+          
                 var repo = service.getRepo('repository.prime');
                 repo.getPrimeData();
-            }
+            
         }
         return service;
 
         function init() {
-            amplify.store(userSessionId, null);
+         
             uow.init(entityManager, entityQuery);
             entityManager.fetchMetadata();
-            // Here's how we get the AJAX adapter and set the header required for the Web API anti-CSRF mechanism:
-            var ajaxAdapter = breeze.config.getAdapterInstance("ajax");
-            ajaxAdapter.defaultSettings = {
-                headers: {
-                    'Authorization': antiForgeryToken,
-                    "X-UserSessionId": userSessionId
-                },
-            };
+            
             zStorageWip.init(entityManager);
             setupEventForHasChangesChanged();
             setupEventForEntitiesChanged();
@@ -125,7 +118,7 @@
             // return amplify.store(userSessionId, changesExport);
             // exports everything
             var alldata = entityManager.exportEntities();
-            return amplify.store(userSessionId, alldata);
+            
         }
     }
 })();

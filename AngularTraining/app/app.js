@@ -30,8 +30,8 @@
         }
         ]);
 
-    app.run(['$rootScope', '$q', '$state', 'authDataservice', 'common',
-    function ($rootScope, $q, $state, User, common) {
+    app.run(['$rootScope', '$q', '$state',  'common',
+    function ($rootScope, $q, $state, common) {
 
                 $rootScope.$on('Authorization',
                 function (currentScope, userData) {
@@ -39,18 +39,6 @@
 
             var getLogFn = common.logger.getLogFn;
             var log = getLogFn();
-            try {
-                User.isAuthenticated();
-            } catch (e) {
-                // do nothing with this error
-            }
-            $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
-                if (error.name === 'AuthenticationRequired') {
-                    log('Authentication is Required')
-                    //common.logger.logError('Authentication is Required');
-                    User.setNextState(toState.name, 'You must login to access this page');
-                    $state.go('login', {}, { reload: true });
-                }
-            });
+          
         }]);
 })();

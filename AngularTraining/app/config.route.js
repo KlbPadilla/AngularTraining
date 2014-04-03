@@ -26,10 +26,8 @@
         { name: 'dashboard', config: { url: 'dashboard', title: 'dashboard', templateUrl: 'app/dashboard/dashboard.html', controller: '', settings: { nav: 1, content: '<i class="fa fa-calendar"></i> Dashboard' } } },
 
         //Customers
-        { name: 'customers', config: { url: 'customers', title: 'customers', templateUrl: 'app/angularTraining/customer/customers.html', controller: '', settings: { nav: 2, content: '<i class="fa fa-calendar"></i> Customers' }, resolve: { user: 'authDataservice', authenticationRequired: function (user) { user.isAuthenticated(); } } } },
-        { name: 'customersView', config: { url: 'customersView', title: 'customersView', templateUrl: 'app/angularTraining/customer/customersView.html', controller: '', settings: { nav: 3, content: '<i class="fa fa-calendar"></i> Customers View' }, resolve: { user: 'authDataservice', authenticationRequired: function (user) { user.isAuthenticated(); } } } },
-        { name: 'customersRestangularBreeze', config: { url: 'customersRestangularBreeze', title: 'customersRestangularBreeze', templateUrl: 'app/angularTraining/customer/customersRestangularBreeze.html', controller: '', settings: { nav: 4, content: '<i class="fa fa-calendar"></i>  Restangular Breeze' }, resolve: { user: 'authDataservice', authenticationRequired: function (user) { user.isAuthenticated(); } } } },
-        { name: 'customersRestangularMongoDb', config: { url: 'customersRestangularMongoDb', title: 'customersRestangularMongoDb', templateUrl: 'app/angularTraining/customer/customersRestangularMongoDb.html', controller: '', settings: { nav: 4, content: '<i class="fa fa-calendar"></i>  Restangular Mongoose' }, resolve: { user: 'authDataservice', authenticationRequired: function (user) { user.isAuthenticated(); } } } }
+        { name: 'customers', config: { url: 'customers', title: 'customers', templateUrl: 'app/angularTraining/customer/customers.html', controller: '', settings: { nav: 2, content: '<i class="fa fa-calendar"></i> Customers' } } },
+        { name: 'customersView', config: { url: 'customersView', title: 'customersView', templateUrl: 'app/angularTraining/customer/customersView.html', controller: '', settings: { nav: 3, content: '<i class="fa fa-calendar"></i> Customers View' }} },
 
 
         ];

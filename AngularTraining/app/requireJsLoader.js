@@ -42,36 +42,18 @@ require(
         '../app/services/model',
         '../app/angularTraining/customer/customers',
         '../app/angularTraining/customer/customer',
-        '../app/authentication/authDataservice.js',
-        '../app/authentication/header.js',
-        '../app/authentication/login.js',
-        '../app/authentication/logout.js',
+
+
         '../Scripts/restangular.min.js',
-        '../app/services/repositories/repository.address.js',
-        '../app/services/repositories/repository.addressType.js',
-        '../app/services/repositories/repository.appUser.js',
+     
         '../app/services/repositories/repository.customer.js',
-        '../app/services/repositories/repository.email.js',
-        '../app/services/repositories/repository.emailType.js',
-        '../app/services/repositories/repository.employee.js',
-        '../app/services/repositories/repository.invoice.js',
-        '../app/services/repositories/repository.invoiceDetail.js',
-        '../app/services/repositories/repository.invoiceType.js',
-        '../app/services/repositories/repository.message.js',
-        '../app/services/repositories/repository.phone.js',
-        '../app/services/repositories/repository.phoneCall.js',
-        '../app/services/repositories/repository.phoneCallType.js',
-        '../app/services/repositories/repository.phoneType.js',
-        '../app/services/repositories/repository.product.js',
-        '../app/services/repositories/repository.productCategory.js',
+
         '../app/dashboard/dashboard.js',
         '../app/services/repositories/repository.prime.js',
 
 
-        '../app/angularTraining/customer/customersView',
-        '../app/angularTraining/customer/customersRestangularBreeze',
-        '../app/angularTraining/customer/customersRestangularMongoDb'
-
+        '../app/angularTraining/customer/customersView'
+ 
 
 
 

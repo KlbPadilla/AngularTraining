@@ -8,7 +8,7 @@ namespace AngularTraining.Models
     {
         public Customer()
         {
-            this.Invoices = new List<Invoice>();
+            
         }
         [Display(Name = "Customer Id")]
         [Key]
@@ -51,6 +51,6 @@ namespace AngularTraining.Models
         [Display(Name = "Is Active")]
         [Required(ErrorMessage = " please enter a value for Is Active")]
         public bool IsActive { get; set; }
-        public virtual ICollection<Invoice> Invoices { get; set; }
+        
     }
 }

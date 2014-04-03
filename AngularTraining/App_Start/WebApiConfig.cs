@@ -10,8 +10,7 @@ namespace AngularTraining.App_Start
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
-            var cors = new EnableCorsAttribute("http://localhost:1499", "*", "GET, POST, OPTIONS, PUT, DELETE"); 
-            config.EnableCors(cors);
+          
             // Use camel case for JSON data.
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
        

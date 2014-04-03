@@ -2,52 +2,8 @@
     'use strict';
     var app = angular.module('app');
 
-    // default values declared globally
-    // use: var baseCustomers = Restangular.all('GetCustomers');
-    app.config(function (RestangularProvider) {
-        RestangularProvider.setBaseUrl('http://localhost:1499/breeze/angularTraining');
-        RestangularProvider.setRequestSuffix('');
-        RestangularProvider.setDefaultHttpFields({ cache: true });
-        RestangularProvider.addRequestInterceptor(
-             function (elem, operation, what) {
-                 if (operation === 'put') {
-                     elem._id = undefined;
-                     return elem;
-                 }
-                 return elem;
-             });
-    });
+  
 
-
-    //Breeze Restangular Service
-    //use: var baseCustomers = BreezeRestangular.all('GetCustomers');
-    app.factory('breezeRestangular', function (Restangular) {
-        return Restangular.withConfig(function (RestangularProvider) {
-            RestangularProvider.setBaseUrl('http://localhost:1499/breeze/angularTraining');
-        
-        });
-    });
-
-
-    //MongooDb Restangular Service
-    //use: var baseCustomers = mongooseRestangular.all('Customers');
-    app.factory('mongoDbRestangular', function (Restangular) {
-        return Restangular.withConfig(function (RestangularProvider) {
-            // RestangularConfigurer.setBaseUrl('http://localhost:28017/angularTraining/');
-            var headers = {
-                'apiKey': 'enRImCZJnt80dSK-evay47L0qEZ4YV3m',
-                'Access-Control-Allow-Origin': 'http://localhost:1499',
-                'Access-Control-Allow-Methods': ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Credendtials': 'true',
-                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-            };
-            // http://localhost:28017/angularTraining/Customers/?filter_FirstName=Oscar
-            //RestangularProvider.setBaseUrl('http://localhost:28017/angularTraining/');
-            RestangularProvider.setBaseUrl('https://api.mongolab.com/api/1/databases');
-            RestangularProvider.setDefaultHeaders(headers);
-        });
-    });
 
 
 
