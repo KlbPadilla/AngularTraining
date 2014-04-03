@@ -1,0 +1,31 @@
+    <section style="padding-top: 30px;" data-ng-controller="LoginCtrl as vm" class="matter">
+    <div class="container">
+        <div class="row">
+            <div class="well center-block" style="width: 300px">
+                <form id="login-form" data-ng-submit="login()">
+                    <div class="row text-center" ng-repeat="error in errors">
+                        <div class="alert alert-danger">
+                            {{error}}
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="text" class="form-control center-block" ng-model="username" placeholder="username" />
+                    </div>
+                    <div class="form-group text-center ">
+                        <input type="password" class="form-control " ng-model="password" placeholder="password" />
+                    </div>
+                  
+                    <div class="form-group">
+                        <label class="label" style="width: 100px;margin-left: 0;color: grey;background: transparent; font-size: 14px;font-weight: normal;margin-top: 10px;margin-right: 2px;float: left">Remember Me</label>
+                        <input class="form-control" type="checkbox" style="width: 20px;margin-left: 0;color: grey;background: transparent; font-size: 10px;font-weight: normal;text-align:left;margin-top: 10px;margin-left: 2px;float: left" id="login-form-remember-me-checkbox" ng-model="persist" />
+                    </div>
+                    <div class="form-group">
+                        <input type="Submit" id="login-form-submit-button" class="btn btn-success btn-block btn-lg center-block" style="width: 200px;" value="Submit">
+                    </div>
+                    
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

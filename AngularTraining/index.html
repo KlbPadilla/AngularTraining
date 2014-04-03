@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<!--<html data-ng-app="app">-->
+<html>
+<head>
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+            display: none !important;
+        }
+    </style>
+    <title data-ng-bind="title">AngularTraining Angular</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <script>
+        // Must be first. IE10 mobile viewport fix
+        if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            var mq = "@-ms-viewport{width:auto!important}";
+            msViewportStyle.appendChild(document.createTextNode(mq));
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="content/ie10mobile.css" rel="stylesheet" />
+    <!--<link href="content/bootstrap.css" rel="stylesheet" />-->
+    <!--<link href="content/font-awesome.css" rel="stylesheet" />-->
+    <link href="content/toastr.css" rel="stylesheet" />
+    <link href="content/breeze.directives.css" rel="stylesheet" />
+ 
+   
+
+
+
+    
+
+    <link href="Content/oscar/bootstrap-oscar-angular-form.css" rel="stylesheet" />
+    <link href="Content/oscar/bootstrap-oscar-angular-list-view.css" rel="stylesheet" />
+    
+    
+
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-49050622-1', 'xneterp.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body data-spy="scroll" data-target=".scroller-spy">
+    <div>
+        <!--<div data-ng-include="'/app/layout/shell.html'"></div>-->
+        <div data-ng-include="'/app/landingPage/landing.html'"></div>
+        <div id="splash-page" data-ng-show="false">
+            <div class="page-splash">
+                <div class="page-splash-message">
+                    AngularTraining Angular
+                </div>
+                <div class="progress progress-striped active page-progress-bar">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span data-cc-scroll-to-top></span>
+    <!--<div ui-view></div>-->
+    <!--[if lt IE 9]>
+    <script src="cdnjs.cloudflare.com/ajax/libs/es5-shim/2.3.0/es5-sham.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/json3/3.3.0/json3.js"></script>
+    <![endif]-->
+    <!--<!-- Vendor Scripts -->
+    <script src="Scripts/jquery-2.0.3.js"></script>
+
+    <!--theme bootscoller-->
+
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-cookies.js"></script>
+    <script src="Scripts/AngularUI/ui-router.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-sanitize.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/toastr.js"></script>
+    <script src="Scripts/moment.js"></script>
+    <!--<script src="Scripts/bootstrap.js"></script>--> 
+    <script src="Scripts/spin.js"></script>
+    <script src="Scripts/breeze.debug.js"></script>
+    <script src="app/services/breeze.dataservice.mongo.js"></script>
+    <!--<script src="../Scripts/breeze.min.js"></script>-->
+    <script src="Scripts/breeze.angular.q.js"></script>
+    <script src="Scripts/breeze.directives.js"></script>
+    <script src="Scripts/breeze.saveErrorExtensions.js"></script>
+
+    <!-- Bootstrapping -->
+    <script src="app/app.js"></script>
+    <script src="app/common/common.js"></script>
+    <!--<script src="Scripts/ng-grid/ng-grid-2.0.7.debug.js"></script>-->
+    <script src="Scripts/lodash.min.js"></script>
+    <script src="app/3rdparty/lowdash3Rd.js"></script>
+    <script src="Scripts/json2.js"></script>
+    <script src="Scripts/json_parse.js"></script>
+    <script src="app/services/airportService.js"></script>
+
+    
+    
+
+
+    <!-- Load custom scripts via RequireJS -->
+    <script src="/Scripts/require.js" data-main="app/requireJsLoader"></script>
+
+</body>
+</html>

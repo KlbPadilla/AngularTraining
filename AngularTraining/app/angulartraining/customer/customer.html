@@ -1,0 +1,57 @@
+
+    <div class="modal-dialog ui-corner-all">
+    <div class="modal-content">
+        <div class="modal-body">
+            <!--<div class="avatar-container">
+                    <a href="http://en.gravatar.com/site/check/" target="_blank">
+                        <img ng-model="attr:{src: ImagePath}" class="img-responsive">
+                    </a>
+                    <div class="form-group">
+                        <input class="form-control-for-image" maxlength="300" ng-model="c.ImagePath" placeholder="Image Path" />
+                    </div>
+                </div>-->
+            <div class="form-group">
+                <label class="label">Is Company</label>
+                <select class="form-control" ng-model="c.IsCompanyString">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="label">First Name</label>
+                <input class="form-control" type="text" maxlength="100" ng-model="c.FirstName" placeholder="First Name" data-z-validate />
+            </div>
+            <div class="form-group">
+                <label class="label">Last Name</label>
+                <input class="form-control" type="text" maxlength="100" ng-model="c.LastName" placeholder="Last Name" data-z-validate />
+            </div>
+            <div class="form-group">
+                <label class="label">Date Of Birth</label>
+                <input class="form-control" type="datetime" ng-model="c.DateOfBirth2" />
+            </div>
+            <div class="form-group">
+                <label class="label">Sex Gender</label>
+                <input class="form-control" type="text" maxlength="40" ng-model="c.SexGender" placeholder="Sex Gender" />
+            </div>
+            <div class="form-group">
+                <label class="label">Marital Status</label>
+                <input class="form-control" type="text" maxlength="40" ng-model="c.MaritalStatus" placeholder="Marital Status" />
+            </div>
+            <div class="form-group">
+                <label class="label">Note</label>
+                <input class="form-control" type="text" maxlength="1000" ng-model="c.Notes" placeholder="Note" />
+            </div>
+            <div class="form-group">
+                <label class="label">Is Active</label>
+                <select class="form-control" ng-model="c.IsActiveString">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" data-ng-click="ok()">OK</button>
+            <button class="btn btn-warning" data-ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+</div>

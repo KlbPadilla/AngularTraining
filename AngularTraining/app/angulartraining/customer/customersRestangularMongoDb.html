@@ -1,0 +1,49 @@
+<section ng-controller="customersRestangularMongoDb">
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <section class="panel">
+                        <ul class="nav top-menu">
+                            <li>
+                                <header class="panel-heading pull-left">
+                                    Customers
+                                </header>
+                            </li>
+                            <li class="panel-heading pull-right">
+                                <div class="btn-group">
+                                    <input type="search" class=" search search-control" placeholder="Search by  FirstName">
+                                    <button class="btn btn-default btn-xs"> Search </button>
+                                    <button class="btn btn-default btn-xs"> Clear </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <button data-dismiss="modal" type="submit" class="btn green">
+                            Add New <i class="fa fa-plus"></i>
+                        </button>
+                        <section class="view-list" data-ng-repeat="c in customers" data-ng-click="popup(c)">
+                            <article class="article-container-full-width">
+                                <div class="selectable-row" title="Go to customer details">
+                                    <div>
+                                        <!--<img data-bind="attr:{src: ImagePath}" class="img-responsive " />-->
+                                        <h1 class="view-list-article-h1">{{c.FirstName}}</h1>
+                                        <address>{{c.LastName}}</address>
+                                        <address>{{c.IsCompany}}</address>
+                                        <address>{{c.DateOfBirth2}}</address>
+                                        <address>{{c.SexGender}}</address>
+                                        <address>{{c.MaritalStatus}}</address>
+                                        <address>{{c.IsActive}}</address>
+                                    </div>
+                                </div>
+                                <div class="button-bar pull-right">
+                                    <button title=".edit" class="btn btn-primary btn-xs "><i class="fa fa-pencil"></i></button>
+                                    <button title=".delete" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></button>
+                                </div>
+                            </article>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

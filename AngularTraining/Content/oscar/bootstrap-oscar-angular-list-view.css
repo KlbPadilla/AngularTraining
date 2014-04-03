@@ -1,0 +1,160 @@
+.wrapper {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 15px;
+    width: 100%;
+    margin-left: 10px;
+}
+.panel {
+    border: none;
+    box-shadow: none;
+}
+.article-container-full-width {
+    margin: 6px;
+    float: left;
+    width: 300px;
+    height: 160px;
+    padding: 1.5% .5%;
+    border: 1px solid #ccc;
+    background-color: #fdfdfb;
+    background-image: -moz-linear-gradient(top,#fdfdfb,#f6f6f5);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fdfdfb),to(#f6f6f5));
+    background-image: -webkit-linear-gradient(top,#fdfdfb,#f6f6f5);
+    background-image: -o-linear-gradient(top,#fdfdfb,#f6f6f5);
+    background-image: linear-gradient(to bottom,#fdfdfb,#f6f6f5);
+    background-repeat: repeat-x;
+    border-right: solid 0 transparent;
+}
+.view-list > article:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #c2d2f6;
+    background-image: -moz-linear-gradient(top,#c2d2f6,#94b0ef);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#c2d2f6),to(#94b0ef));
+    background-image: -webkit-linear-gradient(top,#c2d2f6,#94b0ef);
+    background-image: -o-linear-gradient(top,#c2d2f6,#94b0ef);
+    background-image: linear-gradient(to bottom,#c2d2f6,#94b0ef);
+    background-repeat: repeat-x;
+    border-color: #c2d2f6 #94b0ef #e8eaec;
+}
+.view-list {
+    margin-top: 1px;
+}
+    .view-list > article:first-letter {
+        text-transform: uppercase;
+    }
+    .view-list > article:hover small {
+        color: black;
+    }
+    .view-list > article h1 {
+        font-size: 200%;
+        margin-bottom: 2%;
+        text-align: center;
+        line-height: 70%;
+        z-index: 8;
+    }
+.view-list-article-h1 {
+    font-size: 150%;
+     font-weight: bold;
+    margin-bottom: 2%;
+    text-align: center;
+    line-height: 70%;
+    z-index: 100;
+    position: relative;
+    margin-top: 5px;
+    margin-left: -10px;
+}
+.view-list > .article-container-full-width img {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    padding: 1px;
+    top: 4px;
+    left: 4px;
+    clear: left;
+    clear: right;
+    border-color: #f6f4ae #dbde03 #e8eaec;
+    z-index: 4;
+}
+.view-list > .article-container-full-width address {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 95%;
+    font-weight: bold;
+    margin: 1px;
+    padding: 1px;
+    /*position:relative;*/
+    text-align: center;
+    font-weight: normal;
+    text-transform: none;
+    /*line-height: 120%;*/
+    text-align: center;
+    margin-bottom: 2px;
+    font-style: normal;
+    z-index: 6;
+    line-height: 1.428571429;
+}
+.view-list > .article-container-full-width time {
+    font-size: 60%;
+    color: white;
+    top: 5px;
+    right: 5px;
+    float: left;
+    font-weight: normal;
+    margin: 2px;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    font-weight: normal;
+    text-transform: none;
+    text-align: center;
+    line-height: 50%;
+}
+.view-list > .article-container-full-width {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 95%;
+   
+    margin: 4px;
+    padding: 1px;
+    text-align: center;
+    font-weight: normal;
+    text-transform: none;
+    line-height: 120%;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+    .view-list > .article-container-full-width button {
+        text-align: center;
+        font-size: 12px;
+        margin: 1px;
+        margin-bottom: 5px;
+        padding: 1px;
+        width: 1.8em;
+        height: 1.8em;
+        position: relative;
+        /*width: 20px;
+height: 20px;*/
+        opacity: 0.5;
+        border: 0;
+        vertical-align: bottom !important;
+        z-index: 8;
+    }
+tr.selectable-row:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #f3f09d;
+    background-image: -moz-linear-gradient(top,#f6f4ae,#dbde03);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#f6f4ae),to(#dbde03));
+    background-image: -webkit-linear-gradient(top,#f6f4ae,#dbde03);
+    background-image: -o-linear-gradient(top,#f6f4ae,#dbde03);
+    background-image: linear-gradient(to bottom,#f6f4ae,#dbde03);
+    background-repeat: repeat-x;
+    border-color: #f6f4ae #dbde03 #e8eaec;
+}
+@media only screen and (max-width: 320px) {
+    .view-list > .article-container-full-width {
+    width: 80%;
+    height: 80%;
+    font-size: 80%;
+    line-height: 80%;
+    }
+}

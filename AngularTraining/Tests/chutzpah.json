@@ -1,0 +1,5 @@
+{    
+    "TestHarnessDirectory": "./",
+    "RootReferencePathMode":"SettingsFileDirectory",
+	"CodeCoverageIncludes": ["*.js"]
+}

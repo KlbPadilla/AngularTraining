@@ -1,0 +1,7 @@
+/*anchor*/
+a {
+    color: #667fa0;
+}
+[ui-sref] {
+   cursor: pointer;
+ }

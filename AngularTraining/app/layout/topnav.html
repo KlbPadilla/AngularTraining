@@ -1,0 +1,13 @@
+<div class="navbar navbar-app navbar-absolute-top">
+    <div class="navbar-brand navbar-brand-center" >
+        <span>AngularTraining</span>
+    </div>
+ 
+    <div class="btn-group pull-right" ng-controller="HeaderCtrl" >
+     
+        <div class="btn btn-navbar" style="margin-right: 30px;">
+            <div ng-hide="user.isAuthenticated"><a ui-sref="login"><i class="fa fa-sign-in"></i>Login</a></div>
+            <div ng-show="user.isAuthenticated"><a ui-sref="logout"><i class="fa fa-sign-out"></i>Logout</a></div>
+        </div>
+    </div>
+</div>

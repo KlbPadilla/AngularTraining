@@ -1,0 +1,1136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{277F8356-1118-4FDB-9EB2-C2344DC1A58C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularTraining</RootNamespace>
+    <AssemblyName>AngularTraining</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.ContextProvider, Version=1.4.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.ContextProvider.1.4.11\lib\Breeze.ContextProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.ContextProvider.EF6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.ContextProvider.EF6.1.4.11\lib\Breeze.ContextProvider.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.WebApi2, Version=1.4.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.WebApi2.1.4.11\lib\Breeze.WebApi2.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors">
+      <HintPath>..\packages\Microsoft.Owin.Cors.2.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.3.1.0\lib\net45\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Services" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.3.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.1\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Cors, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.1.1\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.1\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.1.1\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.5.0.0\lib\net45\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.1.1\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivator, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.1.0\lib\net45\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.1.0\lib\net45\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\3rdparty\lowdash3Rd.js" />
+    <Content Include="app\3rdparty\underscore3Rd.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\authentication\header.js" />
+    <Content Include="app\authentication\login-form.html" />
+    <Content Include="app\authentication\login.js" />
+    <Content Include="app\authentication\logout.js" />
+    <Content Include="app\authentication\authDataservice.js" />
+    <Content Include="app\common\common.js" />
+    <Content Include="app\common\logger.js" />
+    <Content Include="app\common\spinner.js" />
+    <Content Include="app\config.breeze.js" />
+    <Content Include="app\config.exceptionHandler.js" />
+    <Content Include="app\config.js" />
+    <Content Include="app\config.route.js" />
+    <Content Include="app\dashboard\dashboard.js" />
+    <Content Include="app\dashboard\dashboard.html" />
+    <Content Include="app\filters\nameCityStateFilter.js" />
+    <Content Include="app\angulartraining\customer\customersRestangularMongoDb.js" />
+    <Content Include="app\angulartraining\customer\customersRestangularMongoDb.html" />
+    <Content Include="app\angulartraining\customer\customersView.js" />
+    <Content Include="app\angulartraining\customer\customersView.html" />
+    <Content Include="app\angulartraining\customer\customer.html" />
+    <Content Include="app\angulartraining\customer\customer.js" />
+    <Content Include="app\angulartraining\customer\customersRestangularBreeze.html" />
+    <Content Include="app\angulartraining\customer\customersRestangularBreeze.js" />
+    <Content Include="app\angulartraining\customer\customers.html" />
+    <Content Include="app\angulartraining\customer\customers.js" />
+    <Content Include="app\angulartraining\customer\controller - Copy.js" />
+    <Content Include="app\landingPage\landing.html" />
+    <Content Include="Content\bootscoller\css\animate.min.css" />
+    <Content Include="Content\bootscoller\css\bootstrap-responsive.css" />
+    <Content Include="Content\bootscoller\css\bootstrap.css" />
+    <Content Include="Content\bootscoller\css\font-awesome-ie7.min.css" />
+    <Content Include="Content\bootscoller\css\font-awesome.css" />
+    <Content Include="Content\bootscoller\css\font-awesome.min.css" />
+    <Content Include="Content\bootscoller\css\prettyPhoto.css" />
+    <Content Include="Content\bootscoller\css\style.css" />
+    <Content Include="Content\bootscoller\ico\favicon.ico" />
+    <Content Include="Content\bootscoller\images\crystal.png" />
+    <Content Include="Content\bootscoller\images\illustrations\colors.png" />
+    <Content Include="Content\bootscoller\images\illustrations\infinity.png" />
+    <Content Include="Content\bootscoller\images\illustrations\retina.png" />
+    <Content Include="Content\bootscoller\images\illustrations\timec.png" />
+    <Content Include="Content\bootscoller\images\indexa.png" />
+    <Content Include="Content\bootscoller\images\indexb.png" />
+    <Content Include="Content\bootscoller\images\pattern.png" />
+    <Content Include="Content\bootscoller\images\responsive.png" />
+    <Content Include="Content\bootscoller\images\staff2.jpg" />
+    <Content Include="Content\bootscoller\images\staff3.jpg" />
+    <Content Include="Content\bootscoller\images\staff4.jpg" />
+    <Content Include="Content\bootscoller\images\staff5.jpg" />
+    <Content Include="Content\bootscoller\images\tablebg.jpg" />
+    <Content Include="Content\bootscoller\img\banner-bg.png" />
+    <Content Include="Content\bootscoller\img\bg-figure.png" />
+    <Content Include="Content\bootscoller\img\bg_body-noise.png" />
+    <Content Include="Content\bootscoller\img\bg_direction_nav.png" />
+    <Content Include="Content\bootscoller\img\bg_footer.png" />
+    <Content Include="Content\bootscoller\img\browser.png" />
+    <Content Include="Content\bootscoller\img\bs-docs-masthead-pattern.png" />
+    <Content Include="Content\bootscoller\img\dot.png" />
+    <Content Include="Content\bootscoller\img\featurebg.png" />
+    <Content Include="Content\bootscoller\img\featured-badge-white.png" />
+    <Content Include="Content\bootscoller\img\footer_facebook.png" />
+    <Content Include="Content\bootscoller\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\bootscoller\img\glyphicons-halflings.png" />
+    <Content Include="Content\bootscoller\img\grid-baseline-20px.png" />
+    <Content Include="Content\bootscoller\img\header-price.png" />
+    <Content Include="Content\bootscoller\img\header-shine.png" />
+    <Content Include="Content\bootscoller\img\line-bg-light.png" />
+    <Content Include="Content\bootscoller\img\line_bg.png" />
+    <Content Include="Content\bootscoller\img\logo-bg-white.png" />
+    <Content Include="Content\bootscoller\img\logo_2.png" />
+    <Content Include="Content\bootscoller\img\noise.png" />
+    <Content Include="Content\bootscoller\img\pattern.gif" />
+    <Content Include="Content\bootscoller\img\pattern2.png" />
+    <Content Include="Content\bootscoller\img\pattern3.png" />
+    <Content Include="Content\bootscoller\img\patternleft.png" />
+    <Content Include="Content\bootscoller\img\pixel.png" />
+    <Content Include="Content\bootscoller\img\png.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Content\bootscoller\img\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\bootscoller\img\price-bg.png" />
+    <Content Include="Content\bootscoller\img\section-top-bg-white.png" />
+    <Content Include="Content\bootscoller\img\section-top-bg.png" />
+    <Content Include="Content\bootscoller\img\shadleft.png" />
+    <Content Include="Content\bootscoller\img\shadright.png" />
+    <Content Include="Content\bootscoller\img\tablebg.jpg" />
+    <Content Include="Content\bootscoller\img\topbottomlinks.png" />
+    <Content Include="Content\bootscoller\img\totop.png" />
+    <Content Include="Content\bootscoller\img\transparent.png" />
+    <Content Include="Content\bootscoller\img\well-wrapp.png" />
+    <Content Include="Scripts\bootscoller\application.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-affix.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-alert.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-button.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-carousel.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-collapse.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-dropdown.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-modal.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-popover.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-scrollspy.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-tab.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-tooltip.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-transition.js" />
+    <Content Include="Scripts\bootscoller\bootstrap-typeahead.js" />
+    <Content Include="Scripts\bootscoller\bootstrap.js" />
+    <Content Include="Scripts\bootscoller\bootstrap.min.js" />
+    <Content Include="Scripts\bootscoller\custom.js" />
+    <Content Include="Scripts\bootscoller\custom_refine_slider.js" />
+    <Content Include="Scripts\bootscoller\google-code-prettify\prettify.css" />
+    <Content Include="Scripts\bootscoller\google-code-prettify\prettify.js" />
+    <Content Include="Scripts\bootscoller\ios-orientation-change-fix.js" />
+    <Content Include="Scripts\bootscoller\jquery.accordion.js" />
+    <Content Include="Scripts\bootscoller\jquery.cslider.js" />
+    <Content Include="Scripts\bootscoller\jquery.cslider_.js" />
+    <Content Include="Scripts\bootscoller\jquery.easing.js" />
+    <Content Include="Scripts\bootscoller\jquery.gmap.js" />
+    <Content Include="Scripts\bootscoller\jquery.hoverIntent.minified.js" />
+    <Content Include="Scripts\bootscoller\jquery.infinitescroll.min.js" />
+    <Content Include="Scripts\bootscoller\jquery.inview.js" />
+    <Content Include="Scripts\bootscoller\jquery.isotope.min.js" />
+    <Content Include="Scripts\bootscoller\jquery.js" />
+    <Content Include="Scripts\bootscoller\jquery.localscroll-1.2.7-min.js" />
+    <Content Include="Scripts\bootscoller\jquery.mousewheel.js" />
+    <Content Include="Scripts\bootscoller\jquery.parallax-1.1.3.js" />
+    <Content Include="Scripts\bootscoller\jquery.prettyPhoto-3.1.4-W3C.js" />
+    <Content Include="Scripts\bootscoller\jquery.scrollTo-1.4.2-min.js" />
+    <Content Include="Scripts\bootscoller\jquery.transit.min.js" />
+    <Content Include="Scripts\bootscoller\jquery.ui.totop.js" />
+    <Content Include="Scripts\bootscoller\jquery.waitforimages.js" />
+    <Content Include="Scripts\bootscoller\modernizr.custom.28468.js" />
+    <Content Include="Scripts\bootscoller\modernizr.custom.79639.js" />
+    <Content Include="Scripts\bootscoller\slider.js" />
+    <Content Include="Tests\Controllers\controller.js" />
+    <Content Include="app\layout\rightpanel.html" />
+    <Content Include="app\layout\rightpanel.js" />
+    <Content Include="app\layout\leftpanel.html" />
+    <Content Include="app\layout\leftpanel.js" />
+    <Content Include="app\layout\headerbar.html" />
+    <Content Include="app\layout\headerbar.js" />
+    <Content Include="app\layout\footer.js" />
+    <Content Include="app\layout\shell.html" />
+    <Content Include="app\layout\shell.js" />
+    <Content Include="app\layout\sidebar.html" />
+    <Content Include="app\layout\sidebar.js" />
+    <Content Include="app\layout\footer.html" />
+    <Content Include="app\layout\topnav.html" />
+    <Content Include="app\menu\footer.html" />
+    <Content Include="app\menu\footer.js" />
+    <Content Include="app\menu\header.html" />
+    <Content Include="app\menu\header.js" />
+    <Content Include="app\menu\horz_bar.html" />
+    <Content Include="app\menu\horz_bar.js" />
+    <Content Include="app\menu\side_bar.html" />
+    <Content Include="app\menu\side_bar.js" />
+    <Content Include="app\menu\top_menu.html" />
+    <Content Include="app\menu\top_menu.js" />
+    <Content Include="app\menu\top_nav.html" />
+    <Content Include="app\menu\top_nav.js" />
+    <Content Include="app\mindspace\directives\Gravatar.js" />
+    <Content Include="app\mindspace\interceptors\ResponseInterceptor.js" />
+    <Content Include="app\mindspace\utils\BrowserDetect.js" />
+    <Content Include="app\mindspace\utils\createGuid.js" />
+    <Content Include="app\mindspace\utils\crypto\md5.js" />
+    <Content Include="app\mindspace\utils\DateTime.js" />
+    <Content Include="app\mindspace\utils\Factory.js" />
+    <Content Include="app\mindspace\utils\logger\ExternalLogger.js" />
+    <Content Include="app\mindspace\utils\logger\LogDecorator.js" />
+    <Content Include="app\mindspace\utils\logger\LogEnhancer.js" />
+    <Content Include="app\mindspace\utils\makeTryCatch.js" />
+    <Content Include="app\mindspace\utils\supplant.js" />
+    <Content Include="app\partials\dialog.html" />
+    <Content Include="app\partials\modal.html" />
+    <Content Include="app\requireJsLoader.js" />
+    <Content Include="app\services\airportService.js" />
+    <Content Include="app\services\applicationData.js" />
+    <Content Include="app\services\breeze.dataservice.mongo.js" />
+    <Content Include="app\services\repositories\repository.address.js" />
+    <Content Include="app\services\repositories\repository.addressType.js" />
+    <Content Include="app\services\repositories\repository.appUser.js" />
+    <Content Include="app\services\repositories\repository.prime.js" />
+    <Content Include="app\services\repositories\repository.customer.js" />
+    <Content Include="app\services\repositories\repository.email.js" />
+    <Content Include="app\services\repositories\repository.emailType.js" />
+    <Content Include="app\services\repositories\repository.employee.js" />
+    <Content Include="app\services\repositories\repository.invoice.js" />
+    <Content Include="app\services\repositories\repository.invoiceDetail.js" />
+    <Content Include="app\services\repositories\repository.invoiceType.js" />
+    <Content Include="app\services\repositories\repository.message.js" />
+    <Content Include="app\services\repositories\repository.phone.js" />
+    <Content Include="app\services\repositories\repository.phoneCall.js" />
+    <Content Include="app\services\repositories\repository.phoneCallType.js" />
+    <Content Include="app\services\repositories\repository.phoneType.js" />
+    <Content Include="app\services\repositories\repository.product.js" />
+    <Content Include="app\services\repositories\repository.productCategory.js" />
+    <Content Include="app\services\dataservice.js" />
+    <Content Include="app\services\model.js" />
+    <Content Include="app\services\directives.js" />
+    <Content Include="app\services\entityManagerFactory.js" />
+    <Content Include="app\services\uow.js" />
+    <Content Include="app\services\utilities.js" />
+    <Content Include="Content\oscar\bootstrap-oscar-angular-list-view.css" />
+    <Content Include="Content\oscar\bootstrap-oscar-angular-form.css" />
+    <Content Include="Content\oscar\bootstrap-reset-angular.css" />
+    <Content Include="Content\oscar\bootstrap-reset_old.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\breeze.directives.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\ionicons.svg" />
+    <Content Include="Content\fonts\lato\Lato-Bla-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-BlaIta-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-Bol-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-BolIta-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-Hai-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-HaiIta-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-Lig-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-LigIta-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-Reg-webfont.svg" />
+    <Content Include="Content\fonts\lato\Lato-RegIta-webfont.svg" />
+    <Content Include="Content\fonts\lato\SIL Open Font License 1.1.txt" />
+    <Content Include="Content\fonts\roboto\Google Android License.txt" />
+    <Content Include="Content\fonts\roboto\Roboto-Black-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-BlackItalic-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-Bold-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldCondensed-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldCondensedItalic-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldItalic-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-Condensed-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-CondensedItalic-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-Italic-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-Light-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-LightItalic-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-Medium-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-MediumItalic-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-Regular-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-Thin-webfont.svg" />
+    <Content Include="Content\fonts\roboto\Roboto-ThinItalic-webfont.svg" />
+    <Content Include="Content\fonts\roboto\roboto.css" />
+    <Content Include="Content\ionic.css" />
+    <Content Include="Content\mobile-angular-ui\examples.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-base.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-base.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-desktop.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-desktop.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-max-width-767px.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-max-width-767px.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-1200px.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-1200px.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-768px-and-max-width-991px.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-768px-and-max-width-991px.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-768px.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-768px.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-992px-and-max-width-1199px.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-992px-and-max-width-1199px.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-992px.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-min-width-992px.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-print.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-print.min.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-screen-and-min-width-768px.css" />
+    <Content Include="Content\mobile-angular-ui\mobile-angular-ui-screen-and-min-width-768px.min.css" />
+    <Content Include="Content\ie10mobile.css" />
+    <Content Include="Content\images\AngularJS-small.png" />
+    <Content Include="Content\images\animated-overlay.gif" />
+    <Content Include="Content\images\breezelogo.png" />
+    <Content Include="Content\images\icon.png" />
+    <Content Include="Content\images\ui-anim_basic_16x16-branch.gif" />
+    <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\images\waiting.gif" />
+    <Content Include="Content\images\wijeditor\wijmo-ui-editor-colormarker.png" />
+    <Content Include="Content\images\wijeditor\wijmo-ui-editor-colormask.png" />
+    <Content Include="Content\images\wijeditor\wijmo-ui-editor-colorwheel.png" />
+    <Content Include="Content\images\wijeditor\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="Content\images\wijeditor\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="Content\images\wijrating\wijmo-ui-rating.png" />
+    <Content Include="Content\img\404_icon.png" />
+    <Content Include="Content\img\500_icon.png" />
+    <Content Include="Content\img\arrow-up.png" />
+    <Content Include="Content\img\avatar-mini.jpg" />
+    <Content Include="Content\img\avatar-mini2.jpg" />
+    <Content Include="Content\img\avatar-mini3.jpg" />
+    <Content Include="Content\img\avatar-mini4.jpg" />
+    <Content Include="Content\img\avatar1.jpg" />
+    <Content Include="Content\img\avatar1_small.jpg" />
+    <Content Include="Content\img\back_disabled.png" />
+    <Content Include="Content\img\back_enabled.png" />
+    <Content Include="Content\img\back_enabled_hover.png" />
+    <Content Include="Content\img\chart-texture.jpg" />
+    <Content Include="Content\img\chat-avatar.jpg" />
+    <Content Include="Content\img\chat-avatar2.jpg" />
+    <Content Include="Content\img\checkbox\check-off.png" />
+    <Content Include="Content\img\checkbox\check-on.png" />
+    <Content Include="Content\img\checkbox\radio-off.png" />
+    <Content Include="Content\img\checkbox\radio-on.png" />
+    <Content Include="Content\img\customSelect-arrow.gif" />
+    <Content Include="Content\img\details_close.png" />
+    <Content Include="Content\img\details_open.png" />
+    <Content Include="Content\img\favicon.ico" />
+    <Content Include="Content\img\file-search\ai.png" />
+    <Content Include="Content\img\file-search\doc.png" />
+    <Content Include="Content\img\file-search\email.png" />
+    <Content Include="Content\img\file-search\eps.png" />
+    <Content Include="Content\img\file-search\jpg.png" />
+    <Content Include="Content\img\file-search\pdf.png" />
+    <Content Include="Content\img\file-search\ppt.png" />
+    <Content Include="Content\img\file-search\psd.png" />
+    <Content Include="Content\img\file-search\rss.png" />
+    <Content Include="Content\img\file-search\xls.png" />
+    <Content Include="Content\img\file-search\zip.png" />
+    <Content Include="Content\img\flags\de.png" />
+    <Content Include="Content\img\flags\es.png" />
+    <Content Include="Content\img\flags\fr.png" />
+    <Content Include="Content\img\flags\ru.png" />
+    <Content Include="Content\img\flags\us.png" />
+    <Content Include="Content\img\follower-avatar.jpg" />
+    <Content Include="Content\img\forward_disabled.png" />
+    <Content Include="Content\img\forward_enabled.png" />
+    <Content Include="Content\img\forward_enabled_hover.png" />
+    <Content Include="Content\img\gallery\1.jpg" />
+    <Content Include="Content\img\gallery\2.jpg" />
+    <Content Include="Content\img\gallery\3.jpg" />
+    <Content Include="Content\img\gallery\4.jpg" />
+    <Content Include="Content\img\gallery\5.jpg" />
+    <Content Include="Content\img\gallery\6.jpg" />
+    <Content Include="Content\img\gallery\7.jpg" />
+    <Content Include="Content\img\left-arrow.png" />
+    <Content Include="Content\img\lock-bg.jpg" />
+    <Content Include="Content\img\mail-avatar.jpg" />
+    <Content Include="Content\img\mask-square.png" />
+    <Content Include="Content\img\mask.png" />
+    <Content Include="Content\img\nav-expand.png" />
+    <Content Include="Content\img\pro-ac-1.png" />
+    <Content Include="Content\img\pro-ac-2.png" />
+    <Content Include="Content\img\product-list\pro-1.jpg" />
+    <Content Include="Content\img\product-list\pro-thumb-1.jpg" />
+    <Content Include="Content\img\product-list\pro-thumb-2.jpg" />
+    <Content Include="Content\img\product-list\pro-thumb-3.jpg" />
+    <Content Include="Content\img\product-list\pro-thumb-big.jpg" />
+    <Content Include="Content\img\product-list\pro1.jpg" />
+    <Content Include="Content\img\product-list\pro2.jpg" />
+    <Content Include="Content\img\product-list\pro3.jpg" />
+    <Content Include="Content\img\product1.jpg" />
+    <Content Include="Content\img\product2.png" />
+    <Content Include="Content\img\product3.png" />
+    <Content Include="Content\img\profile-avatar.jpg" />
+    <Content Include="Content\img\right-arrow.png" />
+    <Content Include="Content\img\ring.jpg" />
+    <Content Include="Content\img\search-icon.jpg" />
+    <Content Include="Content\img\sm-img-1.jpg" />
+    <Content Include="Content\img\sm-img-2.jpg" />
+    <Content Include="Content\img\sm-img-3.jpg" />
+    <Content Include="Content\img\sort_asc.png" />
+    <Content Include="Content\img\sort_asc_disabled.png" />
+    <Content Include="Content\img\sort_both.png" />
+    <Content Include="Content\img\sort_desc.png" />
+    <Content Include="Content\img\sort_desc_disabled.png" />
+    <Content Include="Content\img\vector-lab.jpg" />
+    <Content Include="Content\img\vv.png" />
+    <Content Include="Content\img\xx.png" />
+    <Content Include="Content\ng-grid\ng-grid.css" />
+    <Content Include="Content\ng-grid\ng-grid.min.css" />
+    <Content Include="Content\qunit.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="css\jasmine.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\ionicons.svg" />
+    <Content Include="fonts\lato\Lato-Bla-webfont.svg" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfont.svg" />
+    <Content Include="fonts\lato\Lato-Bol-webfont.svg" />
+    <Content Include="fonts\lato\Lato-BolIta-webfont.svg" />
+    <Content Include="fonts\lato\Lato-Hai-webfont.svg" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfont.svg" />
+    <Content Include="fonts\lato\Lato-Lig-webfont.svg" />
+    <Content Include="fonts\lato\Lato-LigIta-webfont.svg" />
+    <Content Include="fonts\lato\Lato-Reg-webfont.svg" />
+    <Content Include="fonts\lato\Lato-RegIta-webfont.svg" />
+    <Content Include="fonts\lato\SIL Open Font License 1.1.txt" />
+    <Content Include="fonts\roboto\Google Android License.txt" />
+    <Content Include="fonts\roboto\Roboto-Black-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-BlackItalic-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-Bold-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-BoldCondensed-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-BoldCondensedItalic-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-BoldItalic-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-Condensed-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-CondensedItalic-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-Italic-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-Light-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-LightItalic-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-Medium-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-MediumItalic-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-Regular-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-Thin-webfont.svg" />
+    <Content Include="fonts\roboto\Roboto-ThinItalic-webfont.svg" />
+    <Content Include="fonts\roboto\roboto.css" />
+    <Content Include="index.html" />
+    <Content Include="Content\img\.DS_Store" />
+    <Content Include="Content\img\file-search\.DS_Store" />
+    <Content Include="Content\img\gallery\.DS_Store" />
+    <Content Include="Content\img\Sorting icons.psd" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\ionicons.eot" />
+    <Content Include="Content\fonts\ionicons.ttf" />
+    <Content Include="Content\fonts\ionicons.woff" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons.woff" />
+    <Content Include="Content\fonts\.DS_Store" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\lato\Lato-Bla-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-Bla-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-Bla-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-BlaIta-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-BlaIta-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-BlaIta-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-Bol-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-Bol-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-Bol-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-BolIta-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-BolIta-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-BolIta-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-Hai-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-Hai-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-Hai-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-HaiIta-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-HaiIta-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-HaiIta-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-Lig-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-Lig-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-Lig-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-LigIta-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-LigIta-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-LigIta-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-Reg-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-Reg-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-Reg-webfont.woff" />
+    <Content Include="Content\fonts\lato\Lato-RegIta-webfont.eot" />
+    <Content Include="Content\fonts\lato\Lato-RegIta-webfont.ttf" />
+    <Content Include="Content\fonts\lato\Lato-RegIta-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-Black-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-Black-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-Black-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-BlackItalic-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-BlackItalic-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-BlackItalic-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-Bold-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-Bold-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-Bold-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldCondensed-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldCondensed-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldCondensed-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldCondensedItalic-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldCondensedItalic-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldCondensedItalic-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldItalic-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldItalic-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-BoldItalic-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-Condensed-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-Condensed-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-Condensed-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-CondensedItalic-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-CondensedItalic-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-CondensedItalic-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-Italic-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-Italic-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-Italic-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-Light-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-Light-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-Light-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-LightItalic-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-LightItalic-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-LightItalic-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-Medium-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-Medium-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-Medium-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-MediumItalic-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-MediumItalic-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-MediumItalic-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-Regular-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-Regular-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-Regular-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-Thin-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-Thin-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-Thin-webfont.woff" />
+    <Content Include="Content\fonts\roboto\Roboto-ThinItalic-webfont.eot" />
+    <Content Include="Content\fonts\roboto\Roboto-ThinItalic-webfont.ttf" />
+    <Content Include="Content\fonts\roboto\Roboto-ThinItalic-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Bla-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Bla-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Bla-webfont.woff" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-BlaIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Bol-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Bol-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Bol-webfont.woff" />
+    <Content Include="fonts\lato\Lato-BolIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-BolIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-BolIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Hai-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Hai-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Hai-webfont.woff" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-HaiIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Lig-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Lig-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Lig-webfont.woff" />
+    <Content Include="fonts\lato\Lato-LigIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-LigIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-LigIta-webfont.woff" />
+    <Content Include="fonts\lato\Lato-Reg-webfont.eot" />
+    <Content Include="fonts\lato\Lato-Reg-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-Reg-webfont.woff" />
+    <Content Include="fonts\lato\Lato-RegIta-webfont.eot" />
+    <Content Include="fonts\lato\Lato-RegIta-webfont.ttf" />
+    <Content Include="fonts\lato\Lato-RegIta-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-Black-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-Black-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-Black-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-BlackItalic-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-BlackItalic-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-BlackItalic-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-Bold-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-Bold-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-Bold-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-BoldCondensed-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-BoldCondensed-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-BoldCondensed-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-BoldCondensedItalic-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-BoldCondensedItalic-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-BoldCondensedItalic-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-BoldItalic-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-BoldItalic-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-BoldItalic-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-Condensed-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-Condensed-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-Condensed-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-CondensedItalic-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-CondensedItalic-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-CondensedItalic-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-Italic-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-Italic-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-Italic-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-Light-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-Light-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-Light-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-LightItalic-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-LightItalic-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-LightItalic-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-Medium-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-Medium-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-Medium-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-MediumItalic-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-MediumItalic-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-MediumItalic-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-Regular-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-Regular-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-Regular-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-Thin-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-Thin-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-Thin-webfont.woff" />
+    <Content Include="fonts\roboto\Roboto-ThinItalic-webfont.eot" />
+    <Content Include="fonts\roboto\Roboto-ThinItalic-webfont.ttf" />
+    <Content Include="fonts\roboto\Roboto-ThinItalic-webfont.woff" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\bootscoller\font\fontawesome-webfont.eot" />
+    <Content Include="Content\bootscoller\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\bootscoller\font\fontawesome-webfont.woff" />
+    <Content Include="Content\bootscoller\font\FontAwesome.otf" />
+    <Content Include="Content\bootscoller\font\museo_slab_300-webfont.eot" />
+    <Content Include="Content\bootscoller\font\museo_slab_300-webfont.ttf" />
+    <Content Include="Content\bootscoller\font\museo_slab_500-webfont.eot" />
+    <Content Include="Content\bootscoller\font\museo_slab_500-webfont.ttf" />
+    <Content Include="Content\bootscoller\font\proximanova-sbold-webfont.eot" />
+    <Content Include="Content\bootscoller\font\proximanova-sbold-webfont.ttf" />
+    <Content Include="Content\bootscoller\font\proximanova-webfont.eot" />
+    <Content Include="Content\bootscoller\font\proximanova-webfont.ttf" />
+    <None Include="Scripts\amplify-vsdoc.js" />
+    <Content Include="jasmineTestRefs.js" />
+    <Content Include="Scripts\amplify.js" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-cookies.js" />
+    <Content Include="Scripts\angular-cookies.min.js" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-resource.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-sanitize.js" />
+    <Content Include="Scripts\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular.breeze.storagewip.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\AngularUI\ui-router.js" />
+    <Content Include="Scripts\AngularUI\ui-router.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-cookies.min.js.map" />
+    <None Include="Scripts\breeze.intellisense.js" />
+    <Content Include="Scripts\breeze.angular.q.js" />
+    <Content Include="Scripts\breeze.debug.js" />
+    <Content Include="Scripts\breeze.directives.js" />
+    <Content Include="Scripts\breeze.min.js" />
+    <Content Include="Scripts\breeze.saveErrorExtensions.js" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\breeze.partial-entities.js" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\images\sort_asc.png" />
+    <Content Include="Scripts\images\sort_both.png" />
+    <Content Include="Scripts\images\sort_desc.png" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\ionic-angular.min.js" />
+    <Content Include="Scripts\ionic.min.js" />
+    <Content Include="Scripts\jasmine-html.js" />
+    <Content Include="Scripts\jasmine.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json_parse.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-scrollable-iscroll-lite.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-scrollable-iscroll-lite.min.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-scrollable-iscroll.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-scrollable-iscroll.min.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-scrollable-overthrow.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-scrollable-overthrow.min.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-touch-fastclick.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-touch-fastclick.min.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-touch-ng.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui-touch-ng.min.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui.js" />
+    <Content Include="Scripts\mobile-angular-ui\mobile-angular-ui.min.js" />
+    <Content Include="Scripts\lodash.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\ng-grid\jquery.layout-latest.min.js" />
+    <Content Include="Scripts\ng-grid\ng-grid-2.0.7.debug.js" />
+    <Content Include="Scripts\ng-grid\ng-grid-2.0.7.min.js" />
+    <Content Include="Scripts\ng-grid\plugins\ng-grid-csv-export.js" />
+    <Content Include="Scripts\ng-grid\plugins\ng-grid-flexible-height.js" />
+    <Content Include="Scripts\ng-grid\plugins\ng-grid-layout.js" />
+    <Content Include="Scripts\ng-grid\plugins\ng-grid-reorderable.js" />
+    <Content Include="Scripts\ng-grid\plugins\ng-grid-wysiwyg-export.js" />
+    <Content Include="Scripts\ng-grid\plugins\playground.html" />
+    <Content Include="Scripts\qunit.js" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\restangular.min.js" />
+    <Content Include="Scripts\spin.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.min.js" />
+    <Content Include="Tests\Controllers\testController.html" />
+    <Content Include="Tests\Controllers\test.js" />
+    <Content Include="Tests\Service\app.js" />
+    <Content Include="Tests\Service\basicService.js" />
+    <Content Include="Tests\Service\basicService.spec.js" />
+    <Content Include="Tests\Service\httpBasedService.js" />
+    <Content Include="Tests\Service\httpBasedService.spec.js" />
+    <Content Include="Tests\Service\index.html" />
+    <Content Include="Tests\Service\jasmineBootstrap.js" />
+    <Content Include="Tests\Service\providing-mocks-example.js" />
+    <Content Include="Tests\Service\providing-mocks-example.spec.js" />
+    <Content Include="Tests\Service\style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\ng-grid\plugins\README.md" />
+    <Content Include="Tests\chutzpah.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Authentication\AuthenticationDbContext.cs" />
+    <Compile Include="Authentication\Models\AccountBindingModels.cs" />
+    <Compile Include="Authentication\Models\AccountViewModels.cs" />
+    <Compile Include="Authentication\Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Authentication\Results\ChallengeResult.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\AngularTrainingController.cs" />
+    <Compile Include="Authentication\Attributes\WebApiValidateAntiForgeryToken.cs" />
+    <Compile Include="Filters\AntiForgeryTokenAttribute.cs" />
+    <Compile Include="Filters\ModelValidationAttribute.cs" />
+    <Compile Include="Filters\RequireHttpsAttribute.cs" />
+    <Compile Include="Migrations\201402102049316_security.cs" />
+    <Compile Include="Migrations\201402102049316_security.Designer.cs">
+      <DependentUpon>201402102049316_security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ConfigurationAuth.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Addresses.cs" />
+    <Compile Include="Models\AddressTypes.cs" />
+    <Compile Include="Models\AppUsers.cs" />
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Emails.cs" />
+    <Compile Include="Models\EmailTypes.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\InvoiceDetails.cs" />
+    <Compile Include="Models\Invoices.cs" />
+    <Compile Include="Models\InvoiceTypes.cs" />
+    <Compile Include="Models\AngularTrainingDbContext.cs" />
+    <Compile Include="Models\Mapping\AddressesMap.cs" />
+    <Compile Include="Models\Mapping\AddressTypesMap.cs" />
+    <Compile Include="Models\Mapping\AppUsersMap.cs" />
+    <Compile Include="Models\Mapping\CustomersMap.cs" />
+    <Compile Include="Models\Mapping\EmailsMap.cs" />
+    <Compile Include="Models\Mapping\EmailTypesMap.cs" />
+    <Compile Include="Models\Mapping\EmployeesMap.cs" />
+    <Compile Include="Models\Mapping\InvoiceDetailsMap.cs" />
+    <Compile Include="Models\Mapping\InvoicesMap.cs" />
+    <Compile Include="Models\Mapping\InvoiceTypesMap.cs" />
+    <Compile Include="Models\Mapping\MessagesMap.cs" />
+    <Compile Include="Models\Mapping\PhoneCallsMap.cs" />
+    <Compile Include="Models\Mapping\PhoneCallTypesMap.cs" />
+    <Compile Include="Models\Mapping\PhonesMap.cs" />
+    <Compile Include="Models\Mapping\PhoneTypesMap.cs" />
+    <Compile Include="Models\Mapping\ProductCategoriesMap.cs" />
+    <Compile Include="Models\Mapping\ProductsMap.cs" />
+    <Compile Include="Models\Messages.cs" />
+    <Compile Include="Models\PhoneCalls.cs" />
+    <Compile Include="Models\PhoneCallTypes.cs" />
+    <Compile Include="Models\Phones.cs" />
+    <Compile Include="Models\PhoneTypes.cs" />
+    <Compile Include="Models\ProductCategories.cs" />
+    <Compile Include="Models\Products.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="UoW\ApiControllerBase.cs" />
+    <Compile Include="UoW\CustomersRepository.cs" />
+    <Compile Include="UoW\EFRepository.cs" />
+    <Compile Include="UoW\ICustomersRepository.cs" />
+    <Compile Include="UoW\IInvoiceDetailsRepository.cs" />
+    <Compile Include="UoW\IInvoicesRepository.cs" />
+    <Compile Include="UoW\IAngularTrainingUoWork.cs" />
+    <Compile Include="UoW\InvoiceDetailsRepository.cs" />
+    <Compile Include="UoW\InvoicesRepository.cs" />
+    <Compile Include="UoW\AngularTrainingUoWork.cs" />
+    <Compile Include="UoW\IRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\adapters\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Authentication\IdentityExtensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201402102049316_security.resx">
+      <DependentUpon>201402102049316_security.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1499</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1499/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
