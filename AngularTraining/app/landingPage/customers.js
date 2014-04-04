@@ -36,7 +36,7 @@
         }
 
         function getCustomers() {
-            var include = 'Invoices';
+            var include = null;
             applicationData.setDoWorkOffline = false;
             return repo.getPagedCustomers(include, $scope.currentPage, $scope.pageSize).then(function (data) {
            
@@ -69,6 +69,7 @@
             });
         }
         function popup(selectedCustomer) {
+          
             if (selectedCustomer && selectedCustomer.CustomerId) {
                 getCustomerById(selectedCustomer.CustomerId)
                 .then(function (data) {

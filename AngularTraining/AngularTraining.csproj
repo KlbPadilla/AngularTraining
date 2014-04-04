@@ -272,13 +272,12 @@
     <Content Include="app\dashboard\dashboard.js" />
     <Content Include="app\dashboard\dashboard.html" />
     <Content Include="app\filters\nameCityStateFilter.js" />
-    <Content Include="app\angulartraining\customer\customersView.js" />
-    <Content Include="app\angulartraining\customer\customersView.html" />
-    <Content Include="app\angulartraining\customer\customer.html" />
-    <Content Include="app\angulartraining\customer\customer.js" />
-    <Content Include="app\angulartraining\customer\customers.html" />
-    <Content Include="app\angulartraining\customer\customers.js" />
+    <Content Include="app\landingPage\landing.js" />
+    <Content Include="app\landingPage\customers.html" />
+    <Content Include="app\landingPage\customers.js" />
     <Content Include="app\angulartraining\customer\controller - Copy.js" />
+    <Content Include="app\landingPage\customer.html" />
+    <Content Include="app\landingPage\customer.js" />
     <Content Include="app\landingPage\landing.html" />
     <Content Include="Content\bootscoller\css\animate.min.css" />
     <Content Include="Content\bootscoller\css\bootstrap-responsive.css" />
@@ -296,6 +295,8 @@
     <Content Include="Content\bootscoller\images\illustrations\timec.png" />
     <Content Include="Content\bootscoller\images\indexa.png" />
     <Content Include="Content\bootscoller\images\indexb.png" />
+    <Content Include="Content\bootscoller\images\oscar.jpg" />
+    <Content Include="Content\bootscoller\images\oscar2.jpg" />
     <Content Include="Content\bootscoller\images\pattern.png" />
     <Content Include="Content\bootscoller\images\responsive.png" />
     <Content Include="Content\bootscoller\images\staff2.jpg" />

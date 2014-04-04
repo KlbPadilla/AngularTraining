@@ -325,6 +325,7 @@ padding-bottom:4px;
 /************************************** CUSTOM STYLES *************************/
 
 .feature-box {
+  height: 500px;
   background-color: #ecf0f5;
   border-radius: 6px;
   padding: 14px;
@@ -358,6 +359,7 @@ padding-bottom:4px;
 	
 	.box, .feature-box{
 		margin-bottom:30px;
+	
 		
 	}
 	
@@ -470,15 +472,24 @@ padding-bottom:4px;
 				margin-bottom:40px;
 			}
 			.hero-unit h1, .hero-unit h2 {
-				color:#fff;
+			    color:#fff;
 				font-weight:700;
-				text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-				
+			    text-shadow: 0 1px 3px #000000, 0 0 30px #000000;
+			    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);				
 			}
-			
-			.hero-unit h1 {
+
+	.hero-unit h1 {
 				font-size:70px;
 			}
+
+    	.hero-unit h3 {
+				color:#fff;
+    	    font-weight: normal;
+            	font-weight:700;
+			    text-shadow: 0 1px 3px #000000, 0 0 30px #000000;
+			    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);	
+			}
+			
 			
 			#header-section{
 				position:relative;
@@ -832,9 +843,9 @@ bottom: 0%;
 	color: #fff;
 	padding: 19px 0px 20px;
 	width:100%;
-	margin-bottom:15px;
+	margin-bottom:1px;
 	display:inline-block;
-	font-size: 26px;
+	font-size: 20px;
 	font-weight: 700;
 
 }
@@ -854,8 +865,28 @@ bottom: 0%;
 .red .pricing-table-header .price-header {
 	background: #E74C3C;
 }
+
+.blue .pricing-table-header .price-header {
+	background: #589de2;
+}
+
+.orange .pricing-table-header .price-header {
+	background: #f99758;
+}
+
+.purple .pricing-table-header .price-header {
+	background: #aa63ae;
+}
+
+.dark-blue .pricing-table-header .price-header {
+	background: #3e5099;
+}
+
+
 .pricing-table-features, .pricing-table-header .price-value{
-	padding:20px;
+	padding:8px;
+    margin: 0;
+    padding-top: 1px;
 }
 .feature-box.price-feature-box {
 	padding:0px;
@@ -863,6 +894,10 @@ bottom: 0%;
 
 .pricing-table-sign-up{
 	padding:20px;
+    padding-bottom: 10px;
+    position:absolute; 
+    bottom:10px;
+    height: 10px;
 }
 
 /**************************** FOOTER ***********************************************/
@@ -1277,7 +1312,7 @@ padding-top: 18px;
     .sample {
         display: inline-block;
         float: left;
-        width: 40%;
+        width: 100%;
     }
 
     .thumbnail .img-wrap {

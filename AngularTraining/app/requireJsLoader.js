@@ -1,4 +1,5 @@
-﻿require.config({
+﻿
+require.config({
     baseUrl: '/app',
     urlArgs: 'v=1.0',
     appDir: '',
@@ -40,8 +41,8 @@ require(
         '../app/services/utilities',
         '../app/services/uow',
         '../app/services/model',
-        '../app/angularTraining/customer/customers',
-        '../app/angularTraining/customer/customer',
+      
+       
 
 
         '../Scripts/restangular.min.js',
@@ -51,8 +52,8 @@ require(
         '../app/dashboard/dashboard.js',
         '../app/services/repositories/repository.prime.js',
 
-
-        '../app/angularTraining/customer/customersView'
+          '../app/landingPage/landing.js',
+       '../app/landingPage/customer.js'
  
 
 
