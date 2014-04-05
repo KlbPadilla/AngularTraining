@@ -48,9 +48,7 @@
             },
 
             create: function (customer) {
-                var id = breeze.core.getUuid();
-                var data = ({ CustomerId: id, IsCompany: customer.IsCompany, FirstName: customer.FirstName, MainEmail: customer.MainEmail, FacebookPage: customer.FacebookPage, TwitterPage: customer.TwitterPage, LinkedinPage: customer.LinkedinPage, SkypeId: customer.SkypeId, GooglePlusId: customer.GooglePlusId, LastName: customer.LastName, DateOfBirth: customer.DateOfBirth, SexGender: customer.SexGender, imagePath: customer.imagePath, Notes: customer.Notes, Paid: customer.Paid, Phone: customer.Phone, Address1: customer.Address1, Address2: customer.Address2, City: customer.City, State: customer.State });
-                return uow.createEntity('Customer', data);
+                return uow.createEntity('Customer', customer);
             },
 
             delete: function (customer) {

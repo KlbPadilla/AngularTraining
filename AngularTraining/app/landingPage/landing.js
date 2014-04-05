@@ -3,7 +3,9 @@
     var controllerId = 'landing';
     angular.module('app').controller(controllerId, ['$scope', '$modal', 'common', 'dataservice', 'applicationData', landing]);
     function landing($scope, $modal, common, dataservice, applicationData) {
+
         var repoCustomer = dataservice.getRepo('repository.customer');
+
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn();
         $scope.add = add;
@@ -33,7 +35,8 @@
             });
         }
         function add() {
-            applicationData.setDataItem({ IsCompany: false, FirstName: '', MainEmail: '', FacebookPage: '', TwitterPage: '', LinkedinPage: '', SkypeId: '', GooglePlusId: '', LastName: '', DateOfBirth: '', SexGender: '', imagePath: 'http://www.gravatar.com/avatar/?d=mm', Notes: '', Paid: false, Phone: '', Address1: '', Address2: '', City: '', State: '' });
+            var id = breeze.core.getUuid();
+            applicationData.setDataItem({ CustomerId: id, IsCompany: false, FirstName: '', MainEmail: '', FacebookPage: '', TwitterPage: '', LinkedinPage: '', SkypeId: '', GooglePlusId: '', LastName: '', DateOfBirth: '', SexGender: '', imagePath: 'http://www.gravatar.com/avatar/?d=mm', Notes: '', Paid: false, Phone: '', Address1: '', Address2: '', City: '', State: '' });
             openModal();
         };
     }
