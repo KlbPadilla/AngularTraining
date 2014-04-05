@@ -10,11 +10,12 @@
         var log = getLogFn();
         var logError = getLogFn(serviceId, 'error');
         var service = {
-            getById: getById,
-            httpGet: httpGet,
-            createEntity: createEntity,
-            init: init
-        };
+            getById: getById ,
+            httpGet: httpGet ,
+            createEntity: createEntity ,
+            init: init ,
+            emailMessage:emailMessage
+    };
 
         return service;
         // called exclusively by dataservice
@@ -136,6 +137,15 @@
         function createEntity(entity, data) {
             manager.createEntity(entity, data);
             return manager.saveChanges();
+        }
+
+        function emailMessage  (email, subject, body) {
+           
+            var dt = moment().format('h:mm:ss a - M/D/YYYY');
+            return entityQuery.from('SendEmailMessage')
+            .withParameters({ to: email, subject: subject, body: body + ' ---- ' + dt })
+            .using(manager)
+            .execute();
         }
 
         function getByCompositeIds(resource, id1, id2) {

@@ -57,6 +57,9 @@
                 return customer.entityAspect.setDeleted();
             },
 
+      
+
+
         };
 
         return repo;

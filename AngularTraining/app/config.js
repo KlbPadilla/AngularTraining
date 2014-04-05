@@ -9,7 +9,7 @@
 
 
     // Configure Toastr
-    toastr.options.timeOut = 2000;
+    toastr.options.timeOut = 4000;
     toastr.options.positionClass = 'toast-bottom-right';
 
     var remoteServiceName = 'breeze/angularTraining';

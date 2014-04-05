@@ -28,7 +28,7 @@
                 return repoCustomer.create(newCustomer).then(function (data) {
                     var customer = data.entities[0];
                     var firstname = customer.FirstName;
-                    log('Sent, Thanks ' + firstname);
+                    log('Thanks ' + firstname);
                 });
             });
         }
