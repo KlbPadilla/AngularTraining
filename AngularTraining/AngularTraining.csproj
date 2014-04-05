@@ -273,8 +273,6 @@
     <Content Include="app\dashboard\dashboard.html" />
     <Content Include="app\filters\nameCityStateFilter.js" />
     <Content Include="app\landingPage\landing.js" />
-    <Content Include="app\landingPage\customers.html" />
-    <Content Include="app\landingPage\customers.js" />
     <Content Include="app\angulartraining\customer\controller - Copy.js" />
     <Content Include="app\landingPage\customer.html" />
     <Content Include="app\landingPage\customer.js" />

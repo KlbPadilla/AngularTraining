@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
     var serviceId = 'uow';
-    angular.module('app').factory(serviceId, ['common', 'lowdash',  '$q', 'applicationData', uow]);
-    function uow(common, _,  $q, applicationData) {
-  
+    angular.module('app').factory(serviceId, ['common', 'lowdash', '$q', 'applicationData', uow]);
+
+    function uow(common, _, $q, applicationData) {
         var manager;
         var entityQuery;
         var getLogFn = common.logger.getLogFn;
@@ -12,41 +12,39 @@
         var service = {
             getById: getById,
             httpGet: httpGet,
+            createEntity: createEntity,
             init: init
         };
+
         return service;
         // called exclusively by dataservice
         function init(mgr, qry) {
             manager = mgr;
             entityQuery = qry;
-        };
-
+        }
 
         /*********************************************************
         * function summary
-        * 
-        * 
-        * @ forceRemote: 
-        * @ entity: 
-        * @ resource: 
-        * @ orderby: 
-        * @ select: 
-        * @ expand: 
-        * @ pageIndex: 
-        * @ pageSize: 
-        * @ filterKey: 
-        * @ filterOperator: 
-        * @ filtervalue: 
         *
-        * @returns: 
+        *
+        * @ forceRemote:
+        * @ entity:
+        * @ resource:
+        * @ orderby:
+        * @ select:
+        * @ expand:
+        * @ pageIndex:
+        * @ pageSize:
+        * @ filterKey:
+        * @ filterOperator:
+        * @ filtervalue:
+        *
+        * @returns:
         *
         *********************************************************/
         function httpGet(forceRemote, entity, resource, orderby, select, expand, pageIndex, pageSize, filterKey, filterOperator, filtervalue) {
             var resultDataCached = null;
             var fromCache = false;
-       
-
-      
             //* if you are filtering a collection you already pulled from the server, then do it on the viewmodel , no need to get data again here.
             var predicate;
             var error = false;
@@ -57,10 +55,8 @@
                 predicate = null;
             }
             if (applicationData.getDoWorkOffline()) {
-                
             }
             var query = entityQuery.from(entity).orderBy(orderby).using(manager).skip(pageIndex * pageSize).take(pageSize).where(predicate).using(breeze.FetchStrategy.FromLocalCache).toType(entity).expand(expand);
-
             if (query) {
                 try {
                     resultDataCached = manager.executeQueryLocally(query);
@@ -77,8 +73,6 @@
                         fromCache: fromCache
                     });
                 } else {
-                    
-                    
                     fromCache = false;
                     return entityQuery
                     .from(resource)
@@ -91,17 +85,13 @@
                     .take(pageSize)
                     .inlineCount(true)
                     .orderBy(orderby)
-                   // .noTracking()  // http://www.breezejs.com/documentation/querying-depth
+                    // .noTracking() // http://www.breezejs.com/documentation/querying-depth
                     //.select(select) // check if calculated fields work when using select - include those fields on the select
                     .execute()
                     .then(querySucceededAll, queryFailed);
                 }
             };
             function querySucceededAll(data) {
-               
-                //if (entity === 'Customer') {
-                //    debugger;
-                //}
                 return {
                     jsonResults: data.httpResponse.data.Results,
                     entityResults: data.results,
@@ -110,7 +100,6 @@
                 };
             }
         }
-
 
         function getById(resource, id) {
             //* the idea here, is as follow: it will check to see if the entity is already on the cache.
@@ -144,9 +133,12 @@
             }
         }
 
+        function createEntity(entity, data) {
+            manager.createEntity(entity, data);
+            return manager.saveChanges();
+        }
 
         function getByCompositeIds(resource, id1, id2) {
-          
             return entityQuery.from(resource)
             .using(manager)
             .where('entity1Id', 'eq', id1) //ex. .where('ProductId', 'eq', id1)
@@ -158,13 +150,11 @@
                 return data.results[0]; //note that return one not a collection of
             }
         }
+
         function queryFailed(error) {
             var msg = 'Error retrieveing data.' + error.message;
             logError(msg);
             throw error;
         }
-    
-    
-
     }
 })();

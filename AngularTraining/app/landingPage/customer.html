@@ -1,53 +1,63 @@
 
-    <div class="modal-dialog ui-corner-all">
+<div class="modal-dialog ">
     <div class="modal-content">
         <div class="modal-body">
-            <!--<div class="avatar-container">
-                    <a href="http://en.gravatar.com/site/check/" target="_blank">
-                        <img ng-model="attr:{src: ImagePath}" class="img-responsive">
-                    </a>
-                    <div class="form-group">
-                        <input class="form-control-for-image" maxlength="300" ng-model="c.ImagePath" placeholder="Image Path" />
-                    </div>
-                </div>-->
-            <div class="form-group">
-                <label class="label">Is Company</label>
-                <select class="form-control" ng-model="c.IsCompanyString">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-            </div>
+
+
+
             <div class="form-group">
                 <label class="label">First Name</label>
-                <input class="form-control" type="text" maxlength="100" ng-model="c.FirstName" placeholder="First Name" data-z-validate />
+                <input class="form-control" type="text"  data-z-validate ng-model="c.FirstName" placeholder="First Name" />
             </div>
+
+
             <div class="form-group">
                 <label class="label">Last Name</label>
-                <input class="form-control" type="text" maxlength="100" ng-model="c.LastName" placeholder="Last Name" data-z-validate />
+                <input class="form-control" type="text"  maxlength="100" data-z-validate ng-model="c.LastName" placeholder="Last Name" />
             </div>
             <div class="form-group">
                 <label class="label">Date Of Birth</label>
-                <input class="form-control" type="datetime" ng-model="c.DateOfBirth2" />
+
+                <!--<input class="form-control" type="datetime" data-z-validate ng-model="c.DateOfBirth2" />-->
+
+                <input class="form-control" type="date" data-z-validate ng-model="c.DateOfBirth" placeholder="Date of Birth" />
+
+
+            </div>
+
+            <div class="form-group">
+                <label class="label">Email</label>
+                <input class="form-control" required type="email" maxlength="50" data-z-validate ng-model="c.MainEmail" placeholder="Main Email" />
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="label">Phone</label>
+                <input class="form-control" type="text" maxlength="50" data-z-validate ng-model="c.Phone" placeholder="Phone" />
             </div>
             <div class="form-group">
-                <label class="label">Sex Gender</label>
-                <input class="form-control" type="text" maxlength="40" ng-model="c.SexGender" placeholder="Sex Gender" />
+                <label class="label">Address 1</label>
+                <input class="form-control" type="text" maxlength="50" data-z-validate ng-model="c.Address1" placeholder="Address 1" />
             </div>
             <div class="form-group">
-                <label class="label">Marital Status</label>
-                <input class="form-control" type="text" maxlength="40" ng-model="c.MaritalStatus" placeholder="Marital Status" />
+                <label class="label">Address 2</label>
+                <input class="form-control" type="text" maxlength="50" data-z-validate ng-model="c.Address2" placeholder="Address 2" />
             </div>
+            <div class="form-group">
+                <label class="label">City</label>
+                <input class="form-control" type="text" maxlength="50" data-z-validate ng-model="c.City" placeholder="City" />
+            </div>
+            <div class="form-group">
+                <label class="label">Depto</label>
+                <input class="form-control" type="text" maxlength="50" data-z-validate ng-model="c.State" placeholder="State" />
+            </div>
+
             <div class="form-group">
                 <label class="label">Note</label>
-                <input class="form-control" type="text" maxlength="1000" ng-model="c.Notes" placeholder="Note" />
+                <textarea class="form-control" maxlength="1000" data-z-validate ng-model="c.Notes" placeholder="Note"></textarea>
             </div>
-            <div class="form-group">
-                <label class="label">Is Active</label>
-                <select class="form-control" ng-model="c.IsActiveString">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-            </div>
+
         </div>
         <div class="modal-footer">
             <button class="btn btn-primary" data-ng-click="ok()">OK</button>
