@@ -49,7 +49,7 @@ require(
      
         '../app/services/repositories/repository.customer.js',
 
-        '../app/dashboard/dashboard.js',
+  
         '../app/services/repositories/repository.prime.js',
 
           '../app/landingPage/landing.js',
