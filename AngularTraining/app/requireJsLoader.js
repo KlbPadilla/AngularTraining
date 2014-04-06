@@ -1,17 +1,11 @@
-﻿
-require.config({
-    baseUrl: '/app',
-    urlArgs: 'v=1.0',
-    appDir: '',
-    paths:
-    {
-        // Configure alias to full paths
-        //'auth': './quizzer/authentication',
-        //'quiz': './quizzer/quiz',
-        //'utils': './mindspace/utils'
+﻿require.config({
+    shim: {
+        'facebook': {
+            exports: 'FB'
+        }
     },
-    shim:
-    {
+    paths: {
+        'facebook': '//connect.facebook.net/en_US/all'
     }
 });
 require(
@@ -25,6 +19,7 @@ require(
         '../app/common/logger',
         '../app/common/spinner',
      
+   
 
          '../Scripts/ui-bootstrap-tpls-0.10.0.js',
     
@@ -41,8 +36,7 @@ require(
         '../app/services/utilities',
         '../app/services/uow',
         '../app/services/model',
-      
-       
+
 
 
         '../Scripts/restangular.min.js',
@@ -57,7 +51,7 @@ require(
  
 
 
-
+     //'app/services/facebook.js'
 
 
 

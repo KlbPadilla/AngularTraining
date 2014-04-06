@@ -16,6 +16,9 @@
         
             'restangular',
             'ngzWip', // local storage and WIP module
+
+             'bnx.module.facebook',
+
             //'ionic'
             //'mobile-angular-ui',
             //'mobile-angular-ui.touch',
@@ -30,15 +33,25 @@
         }
         ]);
 
-    app.run(['$rootScope', '$q', '$state',  'common',
-    function ($rootScope, $q, $state, common) {
+        app.run(['$rootScope', 'facebook',
+    function ($rootScope, facebook) {
 
                 $rootScope.$on('Authorization',
                 function (currentScope, userData) {
                 });
 
-            var getLogFn = common.logger.getLogFn;
-            var log = getLogFn();
+                $rootScope.$on ('fb.auth.authResponseChange', function(event , response) {
+                  if (response == 'connected') {
+                        facebook.api('me').then(function (result) {
+                            $rootScope.userInfo = result;
+                        });
+                    } else {
+                        $rootScope.userInfo = null;
+                    }
+                });
+
+               facebook.login();
+           
           
         }]);
 })();

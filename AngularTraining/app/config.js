@@ -42,5 +42,10 @@
         cfg.config.controllerActivateSuccessEvent = 'controller.activateSuccess';
         cfg.config.spinnerToggleEvent = 'spinner.toggle';
     }]);
+
+    app.config(['facebookProvider', function (facebookProvider) {
+        facebookProvider.init({ appId: "588374771270112" });
+    }]);
+
     //#endregion
 })();

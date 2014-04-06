@@ -3,6 +3,25 @@
     var app = angular.module('app');
 
 
+    //app.directive('facebook', function ($location, facebook) {
+    //    var template = "<div id='fb-root'></div>";
+    //    return {
+    //        restrict: 'EA',
+    //        template: template,
+    //    }
+    //});
+
+    app.directive('facebook', function ($location, facebook) {
+        var template =
+            "<div id='fb-root'><script type='text/javascript' async='true' src='" +
+            "//connect.facebook.net/en_US/all.js' id='facebook-jssdk'></script></div>";
+
+        return {
+            restrict: 'EA',
+            template: template,
+        };
+    });
+
     app.directive('ccScrollToTop', ['$window',
     // Usage:
     // <span data-cc-scroll-to-top></span>
