@@ -42,7 +42,7 @@
         };
 
         function logout() {
-            document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:12499/index.html";
+            document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://ngtraining.azurewebsites.net/index.html";
         };
 
 
