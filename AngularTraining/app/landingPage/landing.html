@@ -83,21 +83,20 @@ Oscar
                                     <h3 class="text-center">
                                         <span class="get-it">Google’s AngularJS is an extremely productive framework for complex “Single Page Apps”. AngularJS can be tough to learn, and you need to learn it well to obtain all its benefits. We can’t make it easy, but we can teach you.!</span>
                                     </h3>
-                                    <hr class="half">
+                                    <div data-ng-include="'/app/landingPage/social/facebook.html'"></div>
+                                    create a controller , just like the facebook one and add the logout there
+                                    <google-plus-signin clientid="779560233469-3hf9oa0snog8aqc9rmk4c82u3vvdg6du.apps.googleusercontent.com"></google-plus-signin>
                                     <div class="camein">
                                         <p class="">
-                                            
-                                            <div data-ng-include="'/app/landingPage/authentication.html'"></div>
-                                            <a class="btn btn-large btn-danger  center-block" ng-click="add()" title="">Register - or - Get More Info</a>
-                                            <!--<i class="or">- or -</i>
-                                                <a href="#" class="btn btn-large btn-block-third btn-warning" title="">Ask More Info</a>-->
+                                            <a class="btn btn-large btn-danger  center-block" ng-click="logout()" title="">logout</a>
                                         </p>
+                                    </div>
+                                        <hr class="half">
                                         <div class="camein">
                                             <p class="">
-                                                <a class="btn btn-large center-block" title="">Register - or - Get More Info</a>
+                                                <a class="btn btn-large btn-danger  center-block" ng-click="add()" title="">Register - or - Get More Info</a>
                                             </p>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

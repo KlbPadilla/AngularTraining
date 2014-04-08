@@ -1,4 +1,5 @@
-﻿
+﻿/// <reference path="landingPage/social/facebook.js" />
+
 require.config({
     shim: {
         'facebook': {
@@ -51,8 +52,11 @@ require(
        '../app/landingPage/customer.js',
  
 
- '../app/services/facebookAngular.js',
-       '../app/landingPage/authenticationCtrl.js'
+ '../app/services/social/facebook-signin.js',
+ '../app/landingPage/social/facebook.js',
+
+  '../app/services/social/google-plus-signin.js'
+
 
 
 

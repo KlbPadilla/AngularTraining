@@ -9,6 +9,7 @@
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn();
         $scope.add = add;
+        $scope.logout = logout;
         $scope.activate = activate;
         $scope.title = 'Angular JS Training';
         $scope.customer = '';
@@ -39,5 +40,11 @@
             applicationData.setDataItem({ CustomerId: id, IsCompany: false, FirstName: '', MainEmail: '', FacebookPage: '', TwitterPage: '', LinkedinPage: '', SkypeId: '', GooglePlusId: '', LastName: '', DateOfBirth: '', SexGender: '', imagePath: 'http://www.gravatar.com/avatar/?d=mm', Notes: '', Paid: false, Phone: '', Address1: '', Address2: '', City: '', State: '' });
             openModal();
         };
+
+        function logout() {
+            document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:12499/index.html";
+        };
+
+
     }
 })();

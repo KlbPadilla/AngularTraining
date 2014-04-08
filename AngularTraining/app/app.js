@@ -17,7 +17,7 @@
     'restangular',
     'ngzWip', // local storage and WIP module
     'facebook',
-
+    'directive.g+signin',
 
     ]);
 
@@ -43,7 +43,14 @@
         function (currentScope, userData) {
         });
 
-
+        $rootScope.$on('event:google-plus-signin-success', function (event, authResult) {
+            // User successfully authorized the G+ App!
+            console.log('Signed in!');
+        });
+        $rootScope.$on('event:google-plus-signin-failure', function (event, authResult) {
+            // to handle authentication errors and sign outs
+            console.log('Not signed into Google Plus.');
+        });
 
        
     }]);

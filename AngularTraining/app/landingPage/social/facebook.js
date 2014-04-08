@@ -1,9 +1,9 @@
 ﻿
 (function () {
     'use strict';
-    var controllerId = 'authenticationCtrl';
-    angular.module('app').controller(controllerId, ['$scope', '$timeout', 'Facebook', authenticationCtrl]);
-    function authenticationCtrl($scope, $timeout, Facebook) {
+    var controllerId = 'facebookCtrl';
+    angular.module('app').controller(controllerId, ['$scope', '$timeout', 'Facebook', facebookCtrl]);
+    function facebookCtrl($scope, $timeout, Facebook) {
         $scope.user = {};
         $scope.logged = false;
         $scope.byebye = false;
