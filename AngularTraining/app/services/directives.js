@@ -2,8 +2,27 @@
     'use strict';
     var app = angular.module('app');
 
+    /**
+  * Just for debugging purposes.
+  * Shows objects in a pretty way
+  */
+    app.directive('debug', function () {
+        return {
+            restrict:	'E',
+            scope: {
+                expression: '=val'
+            },
+            template:	'<pre>{{debug(expression)}}</pre>',
+            link:	function(scope) {
+                // pretty-prints
+                scope.debug = function(exp) {
+                    return angular.toJson(exp, true);
+                };
+            }
+        }
+    });
 
-    //app.directive('facebook', function ($location, facebook) {
+    //app.directive('facebook', function () {
     //    var template = "<div id='fb-root'></div>";
     //    return {
     //        restrict: 'EA',
@@ -11,16 +30,7 @@
     //    }
     //});
 
-    app.directive('facebook', function ($location, facebook) {
-        var template =
-            "<div id='fb-root'><script type='text/javascript' async='true' src='" +
-            "//connect.facebook.net/en_US/all.js' id='facebook-jssdk'></script></div>";
 
-        return {
-            restrict: 'EA',
-            template: template,
-        };
-    });
 
     app.directive('ccScrollToTop', ['$window',
     // Usage:

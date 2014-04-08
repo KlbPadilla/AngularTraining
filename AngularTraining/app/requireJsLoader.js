@@ -1,4 +1,5 @@
-﻿require.config({
+﻿
+require.config({
     shim: {
         'facebook': {
             exports: 'FB'
@@ -47,11 +48,11 @@ require(
         '../app/services/repositories/repository.prime.js',
 
           '../app/landingPage/landing.js',
-       '../app/landingPage/customer.js'
+       '../app/landingPage/customer.js',
  
 
-
-     //'app/services/facebook.js'
+ '../app/services/facebookAngular.js',
+       '../app/landingPage/authenticationCtrl.js'
 
 
 

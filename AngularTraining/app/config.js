@@ -43,9 +43,27 @@
         cfg.config.spinnerToggleEvent = 'spinner.toggle';
     }]);
 
-    app.config(['facebookProvider', function (facebookProvider) {
-        facebookProvider.init({ appId: "588374771270112" });
-    }]);
+    //app.config(['facebookProvider', function (facebookProvider) {
+    //    facebookProvider.init({ appId: "588374771270112" });
+    //}]);
+
+  //  app.config([
+  //'FacebookProvider',
+  //function(FacebookProvider) {
+  //    var myAppId = '423840851054944';
+     
+  //    // You can set appId with setApp method
+  //    // FacebookProvider.setAppId('myAppId');
+     
+  //    /**
+  //     * After setting appId you need to initialize the module.
+  //     * You can pass the appId on the init method as a shortcut too.
+  //     */
+  //    FacebookProvider.init(myAppId);
+     
+  //}
+  //  ])
+
 
     //#endregion
 })();
